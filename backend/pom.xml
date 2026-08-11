@@ -102,6 +102,20 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Web3j — Java library to talk to Ethereum -->
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>core</artifactId>
+			<version>4.10.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.web3j</groupId>
+			<artifactId>codegen</artifactId>
+			<version>4.10.3</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

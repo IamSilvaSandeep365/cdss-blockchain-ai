@@ -1,0 +1,5 @@
+,Accuracy,Precision,Recall,F1 Score,Train Time
+Decision Tree,70.62%,88.29%,70.62%,76.02%,4.0s
+Random Forest,92.44%,92.90%,92.44%,92.51%,10.6s
+Naive Bayes,93.34%,94.88%,93.34%,92.77%,8.7s
+XGBoost,94.68%,94.74%,94.68%,94.66%,267.0s

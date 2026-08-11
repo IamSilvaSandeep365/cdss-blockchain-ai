@@ -67,6 +67,13 @@ public class PrescriptionService {
                 .orElseThrow(() -> new RuntimeException("Prescription not found"));
     }
 
+    public Prescription updateBlockchainTxHash(Long id, String txHash) {
+        Prescription prescription = getPrescriptionById(id);
+        prescription.setBlockchainTxHash(txHash);
+        prescription.setStatus(Prescription.Status.BLOCKCHAIN_STORED);
+        return prescriptionRepository.save(prescription);
+    }
+
     // Generate SHA-256 hash of prescription data (used for blockchain later)
     private String generateHash(PrescriptionRequest req,
                                 PredictionResponse prediction) {
