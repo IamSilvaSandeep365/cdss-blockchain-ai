@@ -26,3 +26,8 @@ replay_pid*
 # DDXPlus dataset (too large for GitHub)
 ai-model/data/ddxplus/
 ai-model/data/processed/
+
+# Large model files
+ai-model/models/shap_explainer.pkl
+ai-model/models/best_model.pkl
+ai-model/data/*.csv
