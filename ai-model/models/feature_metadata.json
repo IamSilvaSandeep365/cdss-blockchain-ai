@@ -1,0 +1,2093 @@
+{
+  "E_0": {
+    "code": "E_0",
+    "type": "binary",
+    "question": "Have you recently had a viral infection?",
+    "label": "Have you recently had a viral infection?",
+    "group": "Antecedents"
+  },
+  "E_1": {
+    "code": "E_1",
+    "type": "binary",
+    "question": "Are you currently being treated or have you recently been treated with an oral antibiotic for an ear infection?",
+    "label": "Are you currently being treated or have you recently been treated with an oral antibiotic for an ear infection?",
+    "group": "Antecedents"
+  },
+  "E_10": {
+    "code": "E_10",
+    "type": "binary",
+    "question": "Are you currently taking or have you recently taken anti-inflammatory drugs (NSAIDs)?",
+    "label": "Are you currently taking or have you recently taken anti-inflammatory drugs (NSAIDs)?",
+    "group": "Antecedents"
+  },
+  "E_101": {
+    "code": "E_101",
+    "type": "binary",
+    "question": "Have you been hospitalized for an asthma attack in the past year?",
+    "label": "Have you been hospitalized for an asthma attack in the past year?",
+    "group": "Antecedents"
+  },
+  "E_103": {
+    "code": "E_103",
+    "type": "binary",
+    "question": "Have you lost your sense of smell?",
+    "label": "Have you lost your sense of smell?",
+    "group": "Symptoms"
+  },
+  "E_104": {
+    "code": "E_104",
+    "type": "binary",
+    "question": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "label": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+    "group": "Antecedents"
+  },
+  "E_105": {
+    "code": "E_105",
+    "type": "binary",
+    "question": "Have you ever had a heart attack or do you have angina (chest pain)?",
+    "label": "Have you ever had a heart attack or do you have angina (chest pain)?",
+    "group": "Antecedents"
+  },
+  "E_11": {
+    "code": "E_11",
+    "type": "binary",
+    "question": "Have you breastfed one of your children for more than 9 months?",
+    "label": "Have you breastfed one of your children for more than 9 months?",
+    "group": "Antecedents"
+  },
+  "E_111": {
+    "code": "E_111",
+    "type": "binary",
+    "question": "Do you feel like you are dying or were you afraid that you were about do die?",
+    "label": "Do you feel like you are dying or were you afraid that you were about do die?",
+    "group": "Symptoms"
+  },
+  "E_112": {
+    "code": "E_112",
+    "type": "binary",
+    "question": "Do you wheeze while inhaling or is your breathing noisy after coughing spells?",
+    "label": "Do you wheeze while inhaling or is your breathing noisy after coughing spells?",
+    "group": "Symptoms"
+  },
+  "E_114": {
+    "code": "E_114",
+    "type": "binary",
+    "question": "Are you more irritable or has your mood been very unstable recently?",
+    "label": "Are you more irritable or has your mood been very unstable recently?",
+    "group": "Symptoms"
+  },
+  "E_116": {
+    "code": "E_116",
+    "type": "binary",
+    "question": "Have you had a cold in the last 2 weeks?",
+    "label": "Have you had a cold in the last 2 weeks?",
+    "group": "Antecedents"
+  },
+  "E_118": {
+    "code": "E_118",
+    "type": "binary",
+    "question": "Have you ever had pneumonia?",
+    "label": "Have you ever had pneumonia?",
+    "group": "Antecedents"
+  },
+  "E_119": {
+    "code": "E_119",
+    "type": "binary",
+    "question": "Have you been diagnosed with chronic sinusitis?",
+    "label": "Have you been diagnosed with chronic sinusitis?",
+    "group": "Antecedents"
+  },
+  "E_12": {
+    "code": "E_12",
+    "type": "binary",
+    "question": "Do you have a known severe food allergy?",
+    "label": "Do you have a known severe food allergy?",
+    "group": "Antecedents"
+  },
+  "E_123": {
+    "code": "E_123",
+    "type": "binary",
+    "question": "Do you have a chronic obstructive pulmonary disease (COPD)?",
+    "label": "Do you have a chronic obstructive pulmonary disease (COPD)?",
+    "group": "Antecedents"
+  },
+  "E_124": {
+    "code": "E_124",
+    "type": "binary",
+    "question": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "label": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+    "group": "Antecedents"
+  },
+  "E_125": {
+    "code": "E_125",
+    "type": "binary",
+    "question": "Have you ever been diagnosed with gastroesophageal reflux?",
+    "label": "Have you ever been diagnosed with gastroesophageal reflux?",
+    "group": "Antecedents"
+  },
+  "E_127": {
+    "code": "E_127",
+    "type": "binary",
+    "question": "Do you feel that your eyes produce excessive tears?",
+    "label": "Do you feel that your eyes produce excessive tears?",
+    "group": "Symptoms"
+  },
+  "E_128": {
+    "code": "E_128",
+    "type": "binary",
+    "question": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+    "label": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+    "group": "Symptoms"
+  },
+  "E_129": {
+    "code": "E_129",
+    "type": "binary",
+    "question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+    "label": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+    "group": "Symptoms"
+  },
+  "E_13": {
+    "code": "E_13",
+    "type": "binary",
+    "question": "Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?",
+    "label": "Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?",
+    "group": "Symptoms"
+  },
+  "E_130_@_V_156": {
+    "code": "E_130_@_V_156",
+    "type": "categorical",
+    "evidence": "E_130",
+    "question": "What color is the rash?",
+    "value": "pink",
+    "label": "What color is the rash?  →  pink",
+    "group": "Symptoms"
+  },
+  "E_131_@_V_10": {
+    "code": "E_131_@_V_10",
+    "type": "categorical",
+    "evidence": "E_131",
+    "question": "Do your lesions peel off?",
+    "value": "N",
+    "label": "Do your lesions peel off?  →  N",
+    "group": "Symptoms"
+  },
+  "E_132_@_1": {
+    "code": "E_132_@_1",
+    "type": "categorical",
+    "evidence": "E_132",
+    "question": "Is the rash swollen?",
+    "value": "1",
+    "label": "Is the rash swollen?  →  1",
+    "group": "Symptoms"
+  },
+  "E_132_@_3": {
+    "code": "E_132_@_3",
+    "type": "categorical",
+    "evidence": "E_132",
+    "question": "Is the rash swollen?",
+    "value": "3",
+    "label": "Is the rash swollen?  →  3",
+    "group": "Symptoms"
+  },
+  "E_139": {
+    "code": "E_139",
+    "type": "binary",
+    "question": "Do you have a known heart defect?",
+    "label": "Do you have a known heart defect?",
+    "group": "Antecedents"
+  },
+  "E_14": {
+    "code": "E_14",
+    "type": "binary",
+    "question": "Do you have chest pain even at rest?",
+    "label": "Do you have chest pain even at rest?",
+    "group": "Symptoms"
+  },
+  "E_140": {
+    "code": "E_140",
+    "type": "binary",
+    "question": "Have you recently had stools that were black (like coal)?",
+    "label": "Have you recently had stools that were black (like coal)?",
+    "group": "Symptoms"
+  },
+  "E_142": {
+    "code": "E_142",
+    "type": "binary",
+    "question": "Does your mother suffer from asthma?",
+    "label": "Does your mother suffer from asthma?",
+    "group": "Antecedents"
+  },
+  "E_144": {
+    "code": "E_144",
+    "type": "binary",
+    "question": "Do you have diffuse (widespread) muscle pain?",
+    "label": "Do you have diffuse (widespread) muscle pain?",
+    "group": "Symptoms"
+  },
+  "E_145": {
+    "code": "E_145",
+    "type": "binary",
+    "question": "Do you have very abundant or very long menstruation periods?",
+    "label": "Do you have very abundant or very long menstruation periods?",
+    "group": "Symptoms"
+  },
+  "E_147": {
+    "code": "E_147",
+    "type": "binary",
+    "question": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+    "label": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+    "group": "Antecedents"
+  },
+  "E_148": {
+    "code": "E_148",
+    "type": "binary",
+    "question": "Are you feeling nauseous or do you feel like vomiting?",
+    "label": "Are you feeling nauseous or do you feel like vomiting?",
+    "group": "Symptoms"
+  },
+  "E_15": {
+    "code": "E_15",
+    "type": "binary",
+    "question": "Have you started or taken any antipsychotic medication within the last 7 days?",
+    "label": "Have you started or taken any antipsychotic medication within the last 7 days?",
+    "group": "Antecedents"
+  },
+  "E_150": {
+    "code": "E_150",
+    "type": "binary",
+    "question": "Have you been able to pass stools or gas since your symptoms increased?",
+    "label": "Have you been able to pass stools or gas since your symptoms increased?",
+    "group": "Symptoms"
+  },
+  "E_151": {
+    "code": "E_151",
+    "type": "binary",
+    "question": "Do you have swelling in one or more areas of your body?",
+    "label": "Do you have swelling in one or more areas of your body?",
+    "group": "Symptoms"
+  },
+  "E_154": {
+    "code": "E_154",
+    "type": "binary",
+    "question": "Is your skin much paler than usual?",
+    "label": "Is your skin much paler than usual?",
+    "group": "Symptoms"
+  },
+  "E_155": {
+    "code": "E_155",
+    "type": "binary",
+    "question": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+    "label": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+    "group": "Symptoms"
+  },
+  "E_156": {
+    "code": "E_156",
+    "type": "binary",
+    "question": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",
+    "label": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",
+    "group": "Symptoms"
+  },
+  "E_157": {
+    "code": "E_157",
+    "type": "binary",
+    "question": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+    "label": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+    "group": "Symptoms"
+  },
+  "E_159": {
+    "code": "E_159",
+    "type": "binary",
+    "question": "Did you lose consciousness?",
+    "label": "Did you lose consciousness?",
+    "group": "Symptoms"
+  },
+  "E_16": {
+    "code": "E_16",
+    "type": "binary",
+    "question": "Do you feel anxious?",
+    "label": "Do you feel anxious?",
+    "group": "Antecedents"
+  },
+  "E_161": {
+    "code": "E_161",
+    "type": "binary",
+    "question": "Have you recently had a loss of appetite or do you get full more quickly then usually?",
+    "label": "Have you recently had a loss of appetite or do you get full more quickly then usually?",
+    "group": "Symptoms"
+  },
+  "E_162": {
+    "code": "E_162",
+    "type": "binary",
+    "question": "Have you had an involuntary weight loss over the last 3 months?",
+    "label": "Have you had an involuntary weight loss over the last 3 months?",
+    "group": "Symptoms"
+  },
+  "E_163": {
+    "code": "E_163",
+    "type": "binary",
+    "question": "Have you had any vaginal discharge?",
+    "label": "Have you had any vaginal discharge?",
+    "group": "Symptoms"
+  },
+  "E_164": {
+    "code": "E_164",
+    "type": "binary",
+    "question": "Do you feel your heart is beating very irregularly or in a disorganized pattern?",
+    "label": "Do you feel your heart is beating very irregularly or in a disorganized pattern?",
+    "group": "Symptoms"
+  },
+  "E_166": {
+    "code": "E_166",
+    "type": "binary",
+    "question": "Did you vomit after coughing?",
+    "label": "Did you vomit after coughing?",
+    "group": "Symptoms"
+  },
+  "E_168": {
+    "code": "E_168",
+    "type": "binary",
+    "question": "Do you have trouble keeping your tongue in your mouth?",
+    "label": "Do you have trouble keeping your tongue in your mouth?",
+    "group": "Symptoms"
+  },
+  "E_169": {
+    "code": "E_169",
+    "type": "binary",
+    "question": "Is your nose or the back of your throat itchy?",
+    "label": "Is your nose or the back of your throat itchy?",
+    "group": "Symptoms"
+  },
+  "E_17": {
+    "code": "E_17",
+    "type": "binary",
+    "question": "Are you of Asian descent?",
+    "label": "Are you of Asian descent?",
+    "group": "Antecedents"
+  },
+  "E_170": {
+    "code": "E_170",
+    "type": "binary",
+    "question": "Do you have severe itching in one or both eyes?",
+    "label": "Do you have severe itching in one or both eyes?",
+    "group": "Symptoms"
+  },
+  "E_171": {
+    "code": "E_171",
+    "type": "binary",
+    "question": "Do you feel like you are detached from your own body or your surroundings?",
+    "label": "Do you feel like you are detached from your own body or your surroundings?",
+    "group": "Symptoms"
+  },
+  "E_172": {
+    "code": "E_172",
+    "type": "binary",
+    "question": "Do you have a hard time opening/raising one or both eyelids?",
+    "label": "Do you have a hard time opening/raising one or both eyelids?",
+    "group": "Symptoms"
+  },
+  "E_173": {
+    "code": "E_173",
+    "type": "binary",
+    "question": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+    "label": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+    "group": "Symptoms"
+  },
+  "E_174": {
+    "code": "E_174",
+    "type": "binary",
+    "question": "Have you been unintentionally losing weight or have you lost your appetite?",
+    "label": "Have you been unintentionally losing weight or have you lost your appetite?",
+    "group": "Symptoms"
+  },
+  "E_175": {
+    "code": "E_175",
+    "type": "binary",
+    "question": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "label": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+    "group": "Symptoms"
+  },
+  "E_176": {
+    "code": "E_176",
+    "type": "binary",
+    "question": "Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face?",
+    "label": "Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face?",
+    "group": "Symptoms"
+  },
+  "E_177": {
+    "code": "E_177",
+    "type": "binary",
+    "question": "Do you currently, or did you ever, have numbness, loss of sensitivity or tingling anywhere on your body?",
+    "label": "Do you currently, or did you ever, have numbness, loss of sensitivity or tingling anywhere on your body?",
+    "group": "Symptoms"
+  },
+  "E_178": {
+    "code": "E_178",
+    "type": "binary",
+    "question": "Have you noticed any unusual bleeding or bruising related to your consultation today?",
+    "label": "Have you noticed any unusual bleeding or bruising related to your consultation today?",
+    "group": "Symptoms"
+  },
+  "E_179": {
+    "code": "E_179",
+    "type": "binary",
+    "question": "Have you noticed light red blood or blood clots in your stool?",
+    "label": "Have you noticed light red blood or blood clots in your stool?",
+    "group": "Symptoms"
+  },
+  "E_18": {
+    "code": "E_18",
+    "type": "binary",
+    "question": "Do you have cystic fibrosis?",
+    "label": "Do you have cystic fibrosis?",
+    "group": "Antecedents"
+  },
+  "E_180": {
+    "code": "E_180",
+    "type": "binary",
+    "question": "Are you unable to control the direction of your eyes?",
+    "label": "Are you unable to control the direction of your eyes?",
+    "group": "Symptoms"
+  },
+  "E_181": {
+    "code": "E_181",
+    "type": "binary",
+    "question": "Do you have nasal congestion or a clear runny nose?",
+    "label": "Do you have nasal congestion or a clear runny nose?",
+    "group": "Symptoms"
+  },
+  "E_182": {
+    "code": "E_182",
+    "type": "binary",
+    "question": "Do you have greenish or yellowish nasal discharge?",
+    "label": "Do you have greenish or yellowish nasal discharge?",
+    "group": "Symptoms"
+  },
+  "E_183": {
+    "code": "E_183",
+    "type": "binary",
+    "question": "Do you live in a rural area?",
+    "label": "Do you live in a rural area?",
+    "group": "Antecedents"
+  },
+  "E_188": {
+    "code": "E_188",
+    "type": "binary",
+    "question": "Do you have pale stools and dark urine?",
+    "label": "Do you have pale stools and dark urine?",
+    "group": "Symptoms"
+  },
+  "E_19": {
+    "code": "E_19",
+    "type": "binary",
+    "question": "Have you been diagnosed with hyperthyroidism?",
+    "label": "Have you been diagnosed with hyperthyroidism?",
+    "group": "Antecedents"
+  },
+  "E_190": {
+    "code": "E_190",
+    "type": "binary",
+    "question": "Have you noticed that you produce more saliva than usual?",
+    "label": "Have you noticed that you produce more saliva than usual?",
+    "group": "Symptoms"
+  },
+  "E_192": {
+    "code": "E_192",
+    "type": "binary",
+    "question": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+    "label": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+    "group": "Symptoms"
+  },
+  "E_193": {
+    "code": "E_193",
+    "type": "binary",
+    "question": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+    "label": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+    "group": "Symptoms"
+  },
+  "E_194": {
+    "code": "E_194",
+    "type": "binary",
+    "question": "Have you noticed a high pitched sound when breathing in?",
+    "label": "Have you noticed a high pitched sound when breathing in?",
+    "group": "Symptoms"
+  },
+  "E_195": {
+    "code": "E_195",
+    "type": "binary",
+    "question": "Do you live in the suburbs?",
+    "label": "Do you live in the suburbs?",
+    "group": "Antecedents"
+  },
+  "E_198": {
+    "code": "E_198",
+    "type": "binary",
+    "question": "Do you work in agriculture?",
+    "label": "Do you work in agriculture?",
+    "group": "Antecedents"
+  },
+  "E_199": {
+    "code": "E_199",
+    "type": "binary",
+    "question": "Do you work in construction?",
+    "label": "Do you work in construction?",
+    "group": "Antecedents"
+  },
+  "E_2": {
+    "code": "E_2",
+    "type": "binary",
+    "question": "Are you infected with the human immunodeficiency virus (HIV)?",
+    "label": "Are you infected with the human immunodeficiency virus (HIV)?",
+    "group": "Antecedents"
+  },
+  "E_20": {
+    "code": "E_20",
+    "type": "binary",
+    "question": "Do you have Rheumatoid Arthritis?",
+    "label": "Do you have Rheumatoid Arthritis?",
+    "group": "Antecedents"
+  },
+  "E_201": {
+    "code": "E_201",
+    "type": "binary",
+    "question": "Do you have a cough?",
+    "label": "Do you have a cough?",
+    "group": "Symptoms"
+  },
+  "E_202": {
+    "code": "E_202",
+    "type": "binary",
+    "question": "Does the person have a whooping cough?",
+    "label": "Does the person have a whooping cough?",
+    "group": "Symptoms"
+  },
+  "E_203": {
+    "code": "E_203",
+    "type": "binary",
+    "question": "Do you have intense coughing fits?",
+    "label": "Do you have intense coughing fits?",
+    "group": "Symptoms"
+  },
+  "E_204_@_V_1": {
+    "code": "E_204_@_V_1",
+    "type": "categorical",
+    "evidence": "E_204",
+    "question": "Have you traveled out of the country in the last 4 weeks?",
+    "value": "West Africa",
+    "label": "Have you traveled out of the country in the last 4 weeks?  →  West Africa",
+    "group": "Antecedents"
+  },
+  "E_204_@_V_10": {
+    "code": "E_204_@_V_10",
+    "type": "categorical",
+    "evidence": "E_204",
+    "question": "Have you traveled out of the country in the last 4 weeks?",
+    "value": "N",
+    "label": "Have you traveled out of the country in the last 4 weeks?  →  N",
+    "group": "Antecedents"
+  },
+  "E_204_@_V_4": {
+    "code": "E_204_@_V_4",
+    "type": "categorical",
+    "evidence": "E_204",
+    "question": "Have you traveled out of the country in the last 4 weeks?",
+    "value": "North America",
+    "label": "Have you traveled out of the country in the last 4 weeks?  →  North America",
+    "group": "Antecedents"
+  },
+  "E_205": {
+    "code": "E_205",
+    "type": "binary",
+    "question": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+    "label": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+    "group": "Symptoms"
+  },
+  "E_206": {
+    "code": "E_206",
+    "type": "binary",
+    "question": "Do you have painful mouth ulcers or sores?",
+    "label": "Do you have painful mouth ulcers or sores?",
+    "group": "Symptoms"
+  },
+  "E_207": {
+    "code": "E_207",
+    "type": "binary",
+    "question": "Do you live in in a big city?",
+    "label": "Do you live in in a big city?",
+    "group": "Antecedents"
+  },
+  "E_208": {
+    "code": "E_208",
+    "type": "binary",
+    "question": "Is your BMI less than 18.5, or are you underweight?",
+    "label": "Is your BMI less than 18.5, or are you underweight?",
+    "group": "Antecedents"
+  },
+  "E_209": {
+    "code": "E_209",
+    "type": "binary",
+    "question": "Are your vaccinations up to date?",
+    "label": "Are your vaccinations up to date?",
+    "group": "Antecedents"
+  },
+  "E_21": {
+    "code": "E_21",
+    "type": "binary",
+    "question": "Have you ever had a spontaneous pneumothorax?",
+    "label": "Have you ever had a spontaneous pneumothorax?",
+    "group": "Antecedents"
+  },
+  "E_210": {
+    "code": "E_210",
+    "type": "binary",
+    "question": "Have you recently thrown up blood or something resembling coffee beans?",
+    "label": "Have you recently thrown up blood or something resembling coffee beans?",
+    "group": "Symptoms"
+  },
+  "E_211": {
+    "code": "E_211",
+    "type": "binary",
+    "question": "Have you vomited several times or have you made several efforts to vomit?",
+    "label": "Have you vomited several times or have you made several efforts to vomit?",
+    "group": "Symptoms"
+  },
+  "E_212": {
+    "code": "E_212",
+    "type": "binary",
+    "question": "Have you noticed that the tone of your voice has become deeper, softer or hoarse?",
+    "label": "Have you noticed that the tone of your voice has become deeper, softer or hoarse?",
+    "group": "Symptoms"
+  },
+  "E_214": {
+    "code": "E_214",
+    "type": "binary",
+    "question": "Have you noticed a wheezing sound when you exhale?",
+    "label": "Have you noticed a wheezing sound when you exhale?",
+    "group": "Symptoms"
+  },
+  "E_215": {
+    "code": "E_215",
+    "type": "binary",
+    "question": "Do you have symptoms that get worse after eating?",
+    "label": "Do you have symptoms that get worse after eating?",
+    "group": "Symptoms"
+  },
+  "E_216": {
+    "code": "E_216",
+    "type": "binary",
+    "question": "Do you have pain that is increased with movement?",
+    "label": "Do you have pain that is increased with movement?",
+    "group": "Symptoms"
+  },
+  "E_217": {
+    "code": "E_217",
+    "type": "binary",
+    "question": "Are your symptoms worse when lying down and alleviated while sitting up?",
+    "label": "Are your symptoms worse when lying down and alleviated while sitting up?",
+    "group": "Symptoms"
+  },
+  "E_218": {
+    "code": "E_218",
+    "type": "binary",
+    "question": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+    "label": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+    "group": "Symptoms"
+  },
+  "E_219": {
+    "code": "E_219",
+    "type": "binary",
+    "question": "Are your symptoms more prominent at night?",
+    "label": "Are your symptoms more prominent at night?",
+    "group": "Symptoms"
+  },
+  "E_22": {
+    "code": "E_22",
+    "type": "binary",
+    "question": "Do you have a known issue with one of your heart valves?",
+    "label": "Do you have a known issue with one of your heart valves?",
+    "group": "Antecedents"
+  },
+  "E_220": {
+    "code": "E_220",
+    "type": "binary",
+    "question": "Do you have pain that is increased when you breathe in deeply?",
+    "label": "Do you have pain that is increased when you breathe in deeply?",
+    "group": "Symptoms"
+  },
+  "E_221": {
+    "code": "E_221",
+    "type": "binary",
+    "question": "Are the symptoms or pain increased with coughing, with an effort like lifting a weight or from forcing a bowel movement?",
+    "label": "Are the symptoms or pain increased with coughing, with an effort like lifting a weight or from forcing a bowel movement?",
+    "group": "Symptoms"
+  },
+  "E_222": {
+    "code": "E_222",
+    "type": "binary",
+    "question": "Are you exposed to secondhand cigarette smoke on a daily basis?",
+    "label": "Are you exposed to secondhand cigarette smoke on a daily basis?",
+    "group": "Antecedents"
+  },
+  "E_226": {
+    "code": "E_226",
+    "type": "binary",
+    "question": "Are you more likely to develop common allergies than the general population?",
+    "label": "Are you more likely to develop common allergies than the general population?",
+    "group": "Antecedents"
+  },
+  "E_227": {
+    "code": "E_227",
+    "type": "binary",
+    "question": "Are you immunosuppressed?",
+    "label": "Are you immunosuppressed?",
+    "group": "Antecedents"
+  },
+  "E_23": {
+    "code": "E_23",
+    "type": "binary",
+    "question": "Do you ever temporarily stop breathing while you’re asleep?",
+    "label": "Do you ever temporarily stop breathing while you’re asleep?",
+    "group": "Symptoms"
+  },
+  "E_24": {
+    "code": "E_24",
+    "type": "binary",
+    "question": "Have you ever had a diagnosis of anemia?",
+    "label": "Have you ever had a diagnosis of anemia?",
+    "group": "Antecedents"
+  },
+  "E_25": {
+    "code": "E_25",
+    "type": "binary",
+    "question": "Have any of your family members been diagnosed with cluster headaches?",
+    "label": "Have any of your family members been diagnosed with cluster headaches?",
+    "group": "Antecedents"
+  },
+  "E_26": {
+    "code": "E_26",
+    "type": "binary",
+    "question": "Do you have any family members who have been diagnosed with anemia?",
+    "label": "Do you have any family members who have been diagnosed with anemia?",
+    "group": "Antecedents"
+  },
+  "E_27": {
+    "code": "E_27",
+    "type": "binary",
+    "question": "Have you ever had a sexually transmitted infection?",
+    "label": "Have you ever had a sexually transmitted infection?",
+    "group": "Antecedents"
+  },
+  "E_28": {
+    "code": "E_28",
+    "type": "binary",
+    "question": "Are there any members of your family who have been diagnosed myasthenia gravis?",
+    "label": "Are there any members of your family who have been diagnosed myasthenia gravis?",
+    "group": "Antecedents"
+  },
+  "E_29": {
+    "code": "E_29",
+    "type": "binary",
+    "question": "Do any members of your immediate family have a psychiatric illness?",
+    "label": "Do any members of your immediate family have a psychiatric illness?",
+    "group": "Antecedents"
+  },
+  "E_3": {
+    "code": "E_3",
+    "type": "binary",
+    "question": "Have you ever had a pericarditis?",
+    "label": "Have you ever had a pericarditis?",
+    "group": "Antecedents"
+  },
+  "E_30": {
+    "code": "E_30",
+    "type": "binary",
+    "question": "Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?",
+    "label": "Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?",
+    "group": "Symptoms"
+  },
+  "E_31": {
+    "code": "E_31",
+    "type": "binary",
+    "question": "Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?",
+    "label": "Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?",
+    "group": "Antecedents"
+  },
+  "E_32": {
+    "code": "E_32",
+    "type": "binary",
+    "question": "Do you have a decrease in appetite?",
+    "label": "Do you have a decrease in appetite?",
+    "group": "Symptoms"
+  },
+  "E_33": {
+    "code": "E_33",
+    "type": "binary",
+    "question": "Do you have pain that improves when you lean forward?",
+    "label": "Do you have pain that improves when you lean forward?",
+    "group": "Symptoms"
+  },
+  "E_34": {
+    "code": "E_34",
+    "type": "binary",
+    "question": "Do you have an active cancer?",
+    "label": "Do you have an active cancer?",
+    "group": "Antecedents"
+  },
+  "E_35": {
+    "code": "E_35",
+    "type": "binary",
+    "question": "Do you regularly drink coffee or tea?",
+    "label": "Do you regularly drink coffee or tea?",
+    "group": "Antecedents"
+  },
+  "E_37": {
+    "code": "E_37",
+    "type": "binary",
+    "question": "Do you have metastatic cancer?",
+    "label": "Do you have metastatic cancer?",
+    "group": "Antecedents"
+  },
+  "E_38": {
+    "code": "E_38",
+    "type": "binary",
+    "question": "Do you have pain or weakness in your jaw?",
+    "label": "Do you have pain or weakness in your jaw?",
+    "group": "Symptoms"
+  },
+  "E_39": {
+    "code": "E_39",
+    "type": "binary",
+    "question": "Have you felt confused or disorientated lately?",
+    "label": "Have you felt confused or disorientated lately?",
+    "group": "Symptoms"
+  },
+  "E_4": {
+    "code": "E_4",
+    "type": "binary",
+    "question": "Have you or any member of your family ever had croup?",
+    "label": "Have you or any member of your family ever had croup?",
+    "group": "Antecedents"
+  },
+  "E_40": {
+    "code": "E_40",
+    "type": "binary",
+    "question": "Have you been in contact with someone who has had pertussis (whoooping cough)?",
+    "label": "Have you been in contact with someone who has had pertussis (whoooping cough)?",
+    "group": "Antecedents"
+  },
+  "E_41": {
+    "code": "E_41",
+    "type": "binary",
+    "question": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+    "label": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+    "group": "Antecedents"
+  },
+  "E_42": {
+    "code": "E_42",
+    "type": "binary",
+    "question": "Have you been in contact with or ate something that you have an allergy to?",
+    "label": "Have you been in contact with or ate something that you have an allergy to?",
+    "group": "Symptoms"
+  },
+  "E_43": {
+    "code": "E_43",
+    "type": "binary",
+    "question": "Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?",
+    "label": "Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?",
+    "group": "Symptoms"
+  },
+  "E_44": {
+    "code": "E_44",
+    "type": "binary",
+    "question": "Do you take corticosteroids?",
+    "label": "Do you take corticosteroids?",
+    "group": "Antecedents"
+  },
+  "E_45": {
+    "code": "E_45",
+    "type": "binary",
+    "question": "Have you been coughing up blood?",
+    "label": "Have you been coughing up blood?",
+    "group": "Symptoms"
+  },
+  "E_46": {
+    "code": "E_46",
+    "type": "binary",
+    "question": "Have you had 2 or more asthma attacks in the past year?",
+    "label": "Have you had 2 or more asthma attacks in the past year?",
+    "group": "Antecedents"
+  },
+  "E_47": {
+    "code": "E_47",
+    "type": "binary",
+    "question": "Do you suffer from Crohn’s disease or ulcerative colitis (UC)?",
+    "label": "Do you suffer from Crohn’s disease or ulcerative colitis (UC)?",
+    "group": "Antecedents"
+  },
+  "E_48": {
+    "code": "E_48",
+    "type": "binary",
+    "question": "Do you live with 4 or more people?",
+    "label": "Do you live with 4 or more people?",
+    "group": "Antecedents"
+  },
+  "E_49": {
+    "code": "E_49",
+    "type": "binary",
+    "question": "Do you attend or work in a daycare?",
+    "label": "Do you attend or work in a daycare?",
+    "group": "Antecedents"
+  },
+  "E_5": {
+    "code": "E_5",
+    "type": "binary",
+    "question": "Have you ever had fluid in your lungs?",
+    "label": "Have you ever had fluid in your lungs?",
+    "group": "Antecedents"
+  },
+  "E_50": {
+    "code": "E_50",
+    "type": "binary",
+    "question": "Have you had significantly increased sweating?",
+    "label": "Have you had significantly increased sweating?",
+    "group": "Symptoms"
+  },
+  "E_51": {
+    "code": "E_51",
+    "type": "binary",
+    "question": "Have you had diarrhea or an increase in stool frequency?",
+    "label": "Have you had diarrhea or an increase in stool frequency?",
+    "group": "Symptoms"
+  },
+  "E_52": {
+    "code": "E_52",
+    "type": "binary",
+    "question": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+    "label": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+    "group": "Symptoms"
+  },
+  "E_53": {
+    "code": "E_53",
+    "type": "binary",
+    "question": "Do you have pain somewhere, related to your reason for consulting?",
+    "label": "Do you have pain somewhere, related to your reason for consulting?",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_11": {
+    "code": "E_54_@_V_11",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "NA",
+    "label": "Characterize your pain:  →  NA",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_112": {
+    "code": "E_54_@_V_112",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "haunting",
+    "label": "Characterize your pain:  →  haunting",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_154": {
+    "code": "E_54_@_V_154",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "tedious",
+    "label": "Characterize your pain:  →  tedious",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_161": {
+    "code": "E_54_@_V_161",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "sensitive",
+    "label": "Characterize your pain:  →  sensitive",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_179": {
+    "code": "E_54_@_V_179",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "a knife stroke",
+    "label": "Characterize your pain:  →  a knife stroke",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_180": {
+    "code": "E_54_@_V_180",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "tugging",
+    "label": "Characterize your pain:  →  tugging",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_181": {
+    "code": "E_54_@_V_181",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "burning",
+    "label": "Characterize your pain:  →  burning",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_182": {
+    "code": "E_54_@_V_182",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "a cramp",
+    "label": "Characterize your pain:  →  a cramp",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_183": {
+    "code": "E_54_@_V_183",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "heavy",
+    "label": "Characterize your pain:  →  heavy",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_184": {
+    "code": "E_54_@_V_184",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "a pulse",
+    "label": "Characterize your pain:  →  a pulse",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_191": {
+    "code": "E_54_@_V_191",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "violent",
+    "label": "Characterize your pain:  →  violent",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_192": {
+    "code": "E_54_@_V_192",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "sharp",
+    "label": "Characterize your pain:  →  sharp",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_193": {
+    "code": "E_54_@_V_193",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "sickening",
+    "label": "Characterize your pain:  →  sickening",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_196": {
+    "code": "E_54_@_V_196",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "scary",
+    "label": "Characterize your pain:  →  scary",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_198": {
+    "code": "E_54_@_V_198",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "exhausting",
+    "label": "Characterize your pain:  →  exhausting",
+    "group": "Symptoms"
+  },
+  "E_54_@_V_71": {
+    "code": "E_54_@_V_71",
+    "type": "categorical",
+    "evidence": "E_54",
+    "question": "Characterize your pain:",
+    "value": "heartbreaking",
+    "label": "Characterize your pain:  →  heartbreaking",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_100": {
+    "code": "E_55_@_V_100",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "hip(L)",
+    "label": "Do you feel pain somewhere?  →  hip(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_101": {
+    "code": "E_55_@_V_101",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "upper chest",
+    "label": "Do you feel pain somewhere?  →  upper chest",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_103": {
+    "code": "E_55_@_V_103",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "hypochondrium(R)",
+    "label": "Do you feel pain somewhere?  →  hypochondrium(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_104": {
+    "code": "E_55_@_V_104",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "hypochondrium(L)",
+    "label": "Do you feel pain somewhere?  →  hypochondrium(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_108": {
+    "code": "E_55_@_V_108",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "cheek(R)",
+    "label": "Do you feel pain somewhere?  →  cheek(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_109": {
+    "code": "E_55_@_V_109",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "cheek(L)",
+    "label": "Do you feel pain somewhere?  →  cheek(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_119": {
+    "code": "E_55_@_V_119",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "calf(R)",
+    "label": "Do you feel pain somewhere?  →  calf(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_122": {
+    "code": "E_55_@_V_122",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "nose",
+    "label": "Do you feel pain somewhere?  →  nose",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_123": {
+    "code": "E_55_@_V_123",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "nowhere",
+    "label": "Do you feel pain somewhere?  →  nowhere",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_125": {
+    "code": "E_55_@_V_125",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "eye(R)",
+    "label": "Do you feel pain somewhere?  →  eye(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_126": {
+    "code": "E_55_@_V_126",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "eye(L)",
+    "label": "Do you feel pain somewhere?  →  eye(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_127": {
+    "code": "E_55_@_V_127",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "scapula(R)",
+    "label": "Do you feel pain somewhere?  →  scapula(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_128": {
+    "code": "E_55_@_V_128",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "scapula(L)",
+    "label": "Do you feel pain somewhere?  →  scapula(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_129": {
+    "code": "E_55_@_V_129",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "ear(R)",
+    "label": "Do you feel pain somewhere?  →  ear(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_130": {
+    "code": "E_55_@_V_130",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "ear(L)",
+    "label": "Do you feel pain somewhere?  →  ear(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_137": {
+    "code": "E_55_@_V_137",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "palace",
+    "label": "Do you feel pain somewhere?  →  palace",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_148": {
+    "code": "E_55_@_V_148",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "pharynx",
+    "label": "Do you feel pain somewhere?  →  pharynx",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_159": {
+    "code": "E_55_@_V_159",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "breast(R)",
+    "label": "Do you feel pain somewhere?  →  breast(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_160": {
+    "code": "E_55_@_V_160",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "breast(L)",
+    "label": "Do you feel pain somewhere?  →  breast(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_163": {
+    "code": "E_55_@_V_163",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "under the jaw",
+    "label": "Do you feel pain somewhere?  →  under the jaw",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_166": {
+    "code": "E_55_@_V_166",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "temple(R)",
+    "label": "Do you feel pain somewhere?  →  temple(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_167": {
+    "code": "E_55_@_V_167",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "temple(L)",
+    "label": "Do you feel pain somewhere?  →  temple(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_168": {
+    "code": "E_55_@_V_168",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "testicle(R)",
+    "label": "Do you feel pain somewhere?  →  testicle(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_169": {
+    "code": "E_55_@_V_169",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "testicle(L)",
+    "label": "Do you feel pain somewhere?  →  testicle(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_170": {
+    "code": "E_55_@_V_170",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "posterior chest wall(R)",
+    "label": "Do you feel pain somewhere?  →  posterior chest wall(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_171": {
+    "code": "E_55_@_V_171",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "posterior chest wall(L)",
+    "label": "Do you feel pain somewhere?  →  posterior chest wall(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_173": {
+    "code": "E_55_@_V_173",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "tibia(L)",
+    "label": "Do you feel pain somewhere?  →  tibia(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_174": {
+    "code": "E_55_@_V_174",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "trachea",
+    "label": "Do you feel pain somewhere?  →  trachea",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_187": {
+    "code": "E_55_@_V_187",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "belly",
+    "label": "Do you feel pain somewhere?  →  belly",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_197": {
+    "code": "E_55_@_V_197",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "epigastric",
+    "label": "Do you feel pain somewhere?  →  epigastric",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_20": {
+    "code": "E_55_@_V_20",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "tonsil(R)",
+    "label": "Do you feel pain somewhere?  →  tonsil(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_21": {
+    "code": "E_55_@_V_21",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "tonsil(L)",
+    "label": "Do you feel pain somewhere?  →  tonsil(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_25": {
+    "code": "E_55_@_V_25",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "back of head",
+    "label": "Do you feel pain somewhere?  →  back of head",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_26": {
+    "code": "E_55_@_V_26",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "back of the neck",
+    "label": "Do you feel pain somewhere?  →  back of the neck",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_29": {
+    "code": "E_55_@_V_29",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "lower chest",
+    "label": "Do you feel pain somewhere?  →  lower chest",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_30": {
+    "code": "E_55_@_V_30",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "biceps(R)",
+    "label": "Do you feel pain somewhere?  →  biceps(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_31": {
+    "code": "E_55_@_V_31",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "biceps(L)",
+    "label": "Do you feel pain somewhere?  →  biceps(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_32": {
+    "code": "E_55_@_V_32",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "mouth",
+    "label": "Do you feel pain somewhere?  →  mouth",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_33": {
+    "code": "E_55_@_V_33",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "thyroid cartilage",
+    "label": "Do you feel pain somewhere?  →  thyroid cartilage",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_34": {
+    "code": "E_55_@_V_34",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "ankle(R)",
+    "label": "Do you feel pain somewhere?  →  ankle(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_35": {
+    "code": "E_55_@_V_35",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "ankle(L)",
+    "label": "Do you feel pain somewhere?  →  ankle(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_39": {
+    "code": "E_55_@_V_39",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "thoracic spine",
+    "label": "Do you feel pain somewhere?  →  thoracic spine",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_44": {
+    "code": "E_55_@_V_44",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "lateral side of the foot(L)",
+    "label": "Do you feel pain somewhere?  →  lateral side of the foot(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_47": {
+    "code": "E_55_@_V_47",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "popliteal fossa(R)",
+    "label": "Do you feel pain somewhere?  →  popliteal fossa(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_48": {
+    "code": "E_55_@_V_48",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "popliteal fossa(L)",
+    "label": "Do you feel pain somewhere?  →  popliteal fossa(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_51": {
+    "code": "E_55_@_V_51",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "thigh(R)",
+    "label": "Do you feel pain somewhere?  →  thigh(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_53": {
+    "code": "E_55_@_V_53",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "side of the neck(R)",
+    "label": "Do you feel pain somewhere?  →  side of the neck(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_54": {
+    "code": "E_55_@_V_54",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "side of the neck(L)",
+    "label": "Do you feel pain somewhere?  →  side of the neck(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_55": {
+    "code": "E_55_@_V_55",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "side of the chest(R)",
+    "label": "Do you feel pain somewhere?  →  side of the chest(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_56": {
+    "code": "E_55_@_V_56",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "side of the chest(L)",
+    "label": "Do you feel pain somewhere?  →  side of the chest(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_62": {
+    "code": "E_55_@_V_62",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "top of the head",
+    "label": "Do you feel pain somewhere?  →  top of the head",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_63": {
+    "code": "E_55_@_V_63",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (ring finger)(R)",
+    "label": "Do you feel pain somewhere?  →  finger (ring finger)(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_64": {
+    "code": "E_55_@_V_64",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (ring finger)(L)",
+    "label": "Do you feel pain somewhere?  →  finger (ring finger)(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_65": {
+    "code": "E_55_@_V_65",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (little finger)(R)",
+    "label": "Do you feel pain somewhere?  →  finger (little finger)(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_66": {
+    "code": "E_55_@_V_66",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (little finger)(L)",
+    "label": "Do you feel pain somewhere?  →  finger (little finger)(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_67": {
+    "code": "E_55_@_V_67",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (index)(R)",
+    "label": "Do you feel pain somewhere?  →  finger (index)(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_68": {
+    "code": "E_55_@_V_68",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (index)(L)",
+    "label": "Do you feel pain somewhere?  →  finger (index)(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_69": {
+    "code": "E_55_@_V_69",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (middle)(R)",
+    "label": "Do you feel pain somewhere?  →  finger (middle)(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_70": {
+    "code": "E_55_@_V_70",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "finger (middle)(L)",
+    "label": "Do you feel pain somewhere?  →  finger (middle)(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_74": {
+    "code": "E_55_@_V_74",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "dorsal aspect of the wrist(R)",
+    "label": "Do you feel pain somewhere?  →  dorsal aspect of the wrist(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_75": {
+    "code": "E_55_@_V_75",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "dorsal aspect of the wrist(L)",
+    "label": "Do you feel pain somewhere?  →  dorsal aspect of the wrist(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_80": {
+    "code": "E_55_@_V_80",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "palmar face of the wrist(R)",
+    "label": "Do you feel pain somewhere?  →  palmar face of the wrist(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_84": {
+    "code": "E_55_@_V_84",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "flank(R)",
+    "label": "Do you feel pain somewhere?  →  flank(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_85": {
+    "code": "E_55_@_V_85",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "flank(L)",
+    "label": "Do you feel pain somewhere?  →  flank(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_87": {
+    "code": "E_55_@_V_87",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "iliac fossa(R)",
+    "label": "Do you feel pain somewhere?  →  iliac fossa(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_88": {
+    "code": "E_55_@_V_88",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "iliac fossa(L)",
+    "label": "Do you feel pain somewhere?  →  iliac fossa(L)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_89": {
+    "code": "E_55_@_V_89",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "forehead",
+    "label": "Do you feel pain somewhere?  →  forehead",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_92": {
+    "code": "E_55_@_V_92",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "knee(R)",
+    "label": "Do you feel pain somewhere?  →  knee(R)",
+    "group": "Symptoms"
+  },
+  "E_55_@_V_99": {
+    "code": "E_55_@_V_99",
+    "type": "categorical",
+    "evidence": "E_55",
+    "question": "Do you feel pain somewhere?",
+    "value": "hip(R)",
+    "label": "Do you feel pain somewhere?  →  hip(R)",
+    "group": "Symptoms"
+  },
+  "E_56_@_0": {
+    "code": "E_56_@_0",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "0",
+    "label": "How intense is the pain?  →  0",
+    "group": "Symptoms"
+  },
+  "E_56_@_1": {
+    "code": "E_56_@_1",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "1",
+    "label": "How intense is the pain?  →  1",
+    "group": "Symptoms"
+  },
+  "E_56_@_2": {
+    "code": "E_56_@_2",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "2",
+    "label": "How intense is the pain?  →  2",
+    "group": "Symptoms"
+  },
+  "E_56_@_3": {
+    "code": "E_56_@_3",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "3",
+    "label": "How intense is the pain?  →  3",
+    "group": "Symptoms"
+  },
+  "E_56_@_4": {
+    "code": "E_56_@_4",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "4",
+    "label": "How intense is the pain?  →  4",
+    "group": "Symptoms"
+  },
+  "E_56_@_5": {
+    "code": "E_56_@_5",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "5",
+    "label": "How intense is the pain?  →  5",
+    "group": "Symptoms"
+  },
+  "E_56_@_6": {
+    "code": "E_56_@_6",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "6",
+    "label": "How intense is the pain?  →  6",
+    "group": "Symptoms"
+  },
+  "E_56_@_7": {
+    "code": "E_56_@_7",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "7",
+    "label": "How intense is the pain?  →  7",
+    "group": "Symptoms"
+  },
+  "E_56_@_8": {
+    "code": "E_56_@_8",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "8",
+    "label": "How intense is the pain?  →  8",
+    "group": "Symptoms"
+  },
+  "E_56_@_9": {
+    "code": "E_56_@_9",
+    "type": "categorical",
+    "evidence": "E_56",
+    "question": "How intense is the pain?",
+    "value": "9",
+    "label": "How intense is the pain?  →  9",
+    "group": "Symptoms"
+  },
+  "E_6": {
+    "code": "E_6",
+    "type": "binary",
+    "question": "Do you have chronic pancreatitis?",
+    "label": "Do you have chronic pancreatitis?",
+    "group": "Antecedents"
+  },
+  "E_61": {
+    "code": "E_61",
+    "type": "binary",
+    "question": "Are you currently using intravenous drugs?",
+    "label": "Are you currently using intravenous drugs?",
+    "group": "Antecedents"
+  },
+  "E_62": {
+    "code": "E_62",
+    "type": "binary",
+    "question": "Do you regularly take stimulant drugs?",
+    "label": "Do you regularly take stimulant drugs?",
+    "group": "Antecedents"
+  },
+  "E_63": {
+    "code": "E_63",
+    "type": "binary",
+    "question": "Do you have difficulty articulating words/speaking?",
+    "label": "Do you have difficulty articulating words/speaking?",
+    "group": "Symptoms"
+  },
+  "E_64": {
+    "code": "E_64",
+    "type": "binary",
+    "question": "Do you feel out of breath with minimal physical effort?",
+    "label": "Do you feel out of breath with minimal physical effort?",
+    "group": "Symptoms"
+  },
+  "E_65": {
+    "code": "E_65",
+    "type": "binary",
+    "question": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+    "label": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+    "group": "Symptoms"
+  },
+  "E_66": {
+    "code": "E_66",
+    "type": "binary",
+    "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "label": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+    "group": "Symptoms"
+  },
+  "E_67": {
+    "code": "E_67",
+    "type": "binary",
+    "question": "Do you have bouts of choking or shortness of breath that wake you up at night?",
+    "label": "Do you have bouts of choking or shortness of breath that wake you up at night?",
+    "group": "Symptoms"
+  },
+  "E_69": {
+    "code": "E_69",
+    "type": "binary",
+    "question": "Do you have diabetes?",
+    "label": "Do you have diabetes?",
+    "group": "Antecedents"
+  },
+  "E_7": {
+    "code": "E_7",
+    "type": "binary",
+    "question": "Do you have a poor diet?",
+    "label": "Do you have a poor diet?",
+    "group": "Antecedents"
+  },
+  "E_70": {
+    "code": "E_70",
+    "type": "binary",
+    "question": "Are you significantly overweight compared to people of the same height as you?",
+    "label": "Are you significantly overweight compared to people of the same height as you?",
+    "group": "Antecedents"
+  },
+  "E_72": {
+    "code": "E_72",
+    "type": "binary",
+    "question": "Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?",
+    "label": "Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?",
+    "group": "Antecedents"
+  },
+  "E_73": {
+    "code": "E_73",
+    "type": "binary",
+    "question": "In the last month, have you been in contact with anyone infected with the Ebola virus?",
+    "label": "In the last month, have you been in contact with anyone infected with the Ebola virus?",
+    "group": "Antecedents"
+  },
+  "E_74": {
+    "code": "E_74",
+    "type": "binary",
+    "question": "Have you noticed a diffuse (widespread) redness in one or both eyes?",
+    "label": "Have you noticed a diffuse (widespread) redness in one or both eyes?",
+    "group": "Symptoms"
+  },
+  "E_75": {
+    "code": "E_75",
+    "type": "binary",
+    "question": "Do you feel like you are (or were) choking or suffocating?",
+    "label": "Do you feel like you are (or were) choking or suffocating?",
+    "group": "Symptoms"
+  },
+  "E_76": {
+    "code": "E_76",
+    "type": "binary",
+    "question": "Do you feel slightly dizzy or lightheaded?",
+    "label": "Do you feel slightly dizzy or lightheaded?",
+    "group": "Symptoms"
+  },
+  "E_77": {
+    "code": "E_77",
+    "type": "binary",
+    "question": "Do you have a cough that produces colored or more abundant sputum than usual?",
+    "label": "Do you have a cough that produces colored or more abundant sputum than usual?",
+    "group": "Symptoms"
+  },
+  "E_78": {
+    "code": "E_78",
+    "type": "binary",
+    "question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+    "label": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+    "group": "Antecedents"
+  },
+  "E_79": {
+    "code": "E_79",
+    "type": "binary",
+    "question": "Do you smoke cigarettes?",
+    "label": "Do you smoke cigarettes?",
+    "group": "Antecedents"
+  },
+  "E_8": {
+    "code": "E_8",
+    "type": "binary",
+    "question": "Do you currently undergo dialysis?",
+    "label": "Do you currently undergo dialysis?",
+    "group": "Antecedents"
+  },
+  "E_82": {
+    "code": "E_82",
+    "type": "binary",
+    "question": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "label": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+    "group": "Symptoms"
+  },
+  "E_83": {
+    "code": "E_83",
+    "type": "binary",
+    "question": "Have you noticed weakness in your facial muscles and/or eyes?",
+    "label": "Have you noticed weakness in your facial muscles and/or eyes?",
+    "group": "Symptoms"
+  },
+  "E_84": {
+    "code": "E_84",
+    "type": "binary",
+    "question": "Do you feel weakness in both arms and/or both legs?",
+    "label": "Do you feel weakness in both arms and/or both legs?",
+    "group": "Symptoms"
+  },
+  "E_86": {
+    "code": "E_86",
+    "type": "binary",
+    "question": "Do you have any close family members who suffer from allergies (any type), hay fever or eczema?",
+    "label": "Do you have any close family members who suffer from allergies (any type), hay fever or eczema?",
+    "group": "Antecedents"
+  },
+  "E_87": {
+    "code": "E_87",
+    "type": "binary",
+    "question": "Do you have any family members who have asthma?",
+    "label": "Do you have any family members who have asthma?",
+    "group": "Antecedents"
+  },
+  "E_88": {
+    "code": "E_88",
+    "type": "binary",
+    "question": "Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?",
+    "label": "Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?",
+    "group": "Symptoms"
+  },
+  "E_89": {
+    "code": "E_89",
+    "type": "binary",
+    "question": "Do you constantly feel fatigued or do you have non-restful sleep?",
+    "label": "Do you constantly feel fatigued or do you have non-restful sleep?",
+    "group": "Symptoms"
+  },
+  "E_9": {
+    "code": "E_9",
+    "type": "binary",
+    "question": "Do you have swollen or painful lymph nodes?",
+    "label": "Do you have swollen or painful lymph nodes?",
+    "group": "Symptoms"
+  },
+  "E_90": {
+    "code": "E_90",
+    "type": "binary",
+    "question": "Do your symptoms of muscle weakness increase with fatigue and/or stress?",
+    "label": "Do your symptoms of muscle weakness increase with fatigue and/or stress?",
+    "group": "Symptoms"
+  },
+  "E_91": {
+    "code": "E_91",
+    "type": "binary",
+    "question": "Do you have a fever (either felt or measured with a thermometer)?",
+    "label": "Do you have a fever (either felt or measured with a thermometer)?",
+    "group": "Symptoms"
+  },
+  "E_92": {
+    "code": "E_92",
+    "type": "binary",
+    "question": "Did your cheeks suddenly turn red?",
+    "label": "Did your cheeks suddenly turn red?",
+    "group": "Symptoms"
+  },
+  "E_93": {
+    "code": "E_93",
+    "type": "binary",
+    "question": "Do you have numbness, loss of sensation or tingling in the feet?",
+    "label": "Do you have numbness, loss of sensation or tingling in the feet?",
+    "group": "Symptoms"
+  },
+  "E_94": {
+    "code": "E_94",
+    "type": "binary",
+    "question": "Have you had chills or shivers?",
+    "label": "Have you had chills or shivers?",
+    "group": "Symptoms"
+  },
+  "E_96": {
+    "code": "E_96",
+    "type": "binary",
+    "question": "Have you gained weight recently?",
+    "label": "Have you gained weight recently?",
+    "group": "Symptoms"
+  },
+  "E_97": {
+    "code": "E_97",
+    "type": "binary",
+    "question": "Do you have a sore throat?",
+    "label": "Do you have a sore throat?",
+    "group": "Symptoms"
+  },
+  "AGE": {
+    "code": "AGE",
+    "type": "numeric",
+    "label": "Age (years)",
+    "group": "Demographics"
+  },
+  "SEX_M": {
+    "code": "SEX_M",
+    "type": "binary",
+    "label": "Sex: Male",
+    "group": "Demographics"
+  },
+  "SEX_F": {
+    "code": "SEX_F",
+    "type": "binary",
+    "label": "Sex: Female",
+    "group": "Demographics"
+  }
+}

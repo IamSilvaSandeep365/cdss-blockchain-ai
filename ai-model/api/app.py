@@ -1,9 +1,7 @@
 # ================================================================
-#   CDSS Flask API — AI Prediction Service
-#   Endpoint: POST /predict
-#   Called by: Spring Boot Backend
+#   CDSS Flask API — DDXPlus / XGBoost version
+#   Exposes all 270 features (binary + categorical + demographics)
 # ================================================================
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import pandas as pd
@@ -15,214 +13,158 @@ from datetime import datetime
 app = Flask(__name__)
 CORS(app)
 
-# ================================================================
-# Load all model files on startup
-# ================================================================
 BASE_DIR   = os.path.dirname(os.path.abspath(__file__))
 MODELS_DIR = os.path.join(BASE_DIR, '..', 'models')
 
+def _load(name):
+    with open(os.path.join(MODELS_DIR, name), 'rb') as f:
+        return pickle.load(f)
+
 print("⏳ Loading model files...")
-
-with open(os.path.join(MODELS_DIR, 'best_model.pkl'), 'rb') as f:
-    model = pickle.load(f)
-
-with open(os.path.join(MODELS_DIR, 'label_encoder.pkl'), 'rb') as f:
-    le = pickle.load(f)
-
-with open(os.path.join(MODELS_DIR, 'symptom_columns.pkl'), 'rb') as f:
-    symptom_cols = pickle.load(f)
-
-with open(os.path.join(MODELS_DIR, 'shap_explainer.pkl'), 'rb') as f:
-    explainer = pickle.load(f)
-
-print("✅ All model files loaded!")
-print(f"   Symptoms : {len(symptom_cols)}")
-print(f"   Diseases : {len(le.classes_)}")
-
-# ================================================================
-# DEBUG — confirm SHAP output shape on startup
-# ================================================================
-_test_input = pd.DataFrame([{col: 0 for col in symptom_cols}])
-_test_input[symptom_cols[0]] = 1
-_shap_test = np.array(explainer.shap_values(_test_input))
-print(f"✅ SHAP output shape: {_shap_test.shape}")
-print(f"   n_classes={len(le.classes_)}, n_features={len(symptom_cols)}")
+model            = _load('best_model.pkl')
+le               = _load('label_encoder.pkl')
+feature_cols     = _load('symptom_columns.pkl')
+explainer        = _load('shap_explainer.pkl')
+feature_metadata = _load('feature_metadata.pkl')
+print(f"✅ Loaded! {len(feature_cols)} features, {len(le.classes_)} diseases")
 
 
 # ================================================================
-# Helper — extract SHAP values safely regardless of shape
+# Core — build input vector + predict + explain
 # ================================================================
-def extract_shap_for_class(shap_vals, predicted_encoded, n_classes, n_features):
-    arr = np.array(shap_vals)
+def build_input(evidences, age, sex):
+    vec = pd.DataFrame([{c: 0 for c in feature_cols}])
 
-    if arr.ndim == 3 and arr.shape[0] == n_classes:
-        # (n_classes, n_samples, n_features)
-        return arr[predicted_encoded][0]
+    if 'AGE' in feature_cols and age is not None:
+        vec['AGE'] = age
+    if sex == 'M' and 'SEX_M' in feature_cols:
+        vec['SEX_M'] = 1
+    elif sex == 'F' and 'SEX_F' in feature_cols:
+        vec['SEX_F'] = 1
 
-    elif arr.ndim == 3 and arr.shape[2] == n_classes:
-        # (n_samples, n_features, n_classes)
-        return arr[0, :, predicted_encoded]
-
-    elif arr.ndim == 3 and arr.shape[1] == n_classes:
-        # (n_samples, n_classes, n_features)
-        return arr[0, predicted_encoded, :]
-
-    elif arr.ndim == 2:
-        # (n_samples, n_features) — binary or single output
-        return arr[0]
-
-    else:
-        # Fallback
-        return arr.reshape(-1, n_features)[0]
-
-
-# ================================================================
-# Helper — build prediction + SHAP explanation
-# ================================================================
-def predict_with_explanation(symptom_list: list) -> dict:
-    # Build input vector (all zeros)
-    input_vector = pd.DataFrame([{col: 0 for col in symptom_cols}])
-
-    valid_symptoms   = []
-    invalid_symptoms = []
-
-    for symptom in symptom_list:
-        symptom_clean = symptom.strip().lower().replace(' ', '_')
-        if symptom_clean in symptom_cols:
-            input_vector[symptom_clean] = 1
-            valid_symptoms.append(symptom_clean)
+    valid, invalid = [], []
+    for e in evidences:
+        if e in feature_cols:
+            vec[e] = 1
+            valid.append(e)
         else:
-            invalid_symptoms.append(symptom)
+            invalid.append(e)
+    return vec, valid, invalid
 
-    # Predict
-    predicted_encoded = int(model.predict(input_vector)[0])
-    predicted_disease = le.inverse_transform([predicted_encoded])[0]
-    probabilities     = model.predict_proba(input_vector)[0]
-    confidence        = float(probabilities[predicted_encoded]) * 100
 
-    # Top 3 alternatives
-    top3_indices = np.argsort(probabilities)[::-1][:3]
+def predict_core(evidences, age, sex):
+    vec, valid, invalid = build_input(evidences, age, sex)
+
+    enc     = int(model.predict(vec)[0])
+    disease = le.inverse_transform([enc])[0]
+    proba   = model.predict_proba(vec)[0]
+    conf    = round(float(proba[enc]) * 100, 2)
+
+    top3 = np.argsort(proba)[::-1][:3]
     alternatives = [
-        {
-            "disease"    : le.inverse_transform([int(i)])[0],
-            "probability": round(float(probabilities[i]) * 100, 2)
-        }
-        for i in top3_indices
+        {"disease": le.inverse_transform([int(i)])[0],
+         "probability": round(float(proba[i]) * 100, 2)}
+        for i in top3
     ]
 
-    # SHAP explanation
-    shap_vals    = explainer.shap_values(input_vector)
-    symptom_shap = extract_shap_for_class(
-        shap_vals,
-        predicted_encoded,
-        len(le.classes_),
-        len(symptom_cols)
-    )
+    # SHAP for this prediction  (XGBoost: shape = samples, features, classes)
+    sv = np.array(explainer.shap_values(vec))[0][:, enc]
 
-    explanation = [
-        {
-            "symptom"   : symptom_cols[i],
-            "shap_value": round(float(symptom_shap[i]), 4),
-            "active"    : int(input_vector.iloc[0][symptom_cols[i]])
-        }
-        for i in np.argsort(np.abs(symptom_shap))[::-1][:10]
-    ]
+    explanation = []
+    for i in np.argsort(np.abs(sv))[::-1][:10]:
+        feat = feature_cols[i]
+        if vec.iloc[0][feat] == 1 or feat == 'AGE':
+            meta = feature_metadata.get(feat, {})
+            explanation.append({
+                "feature"   : feat,
+                "label"     : meta.get('label', feat),
+                "shap_value": round(float(sv[i]), 4)
+            })
 
     return {
-        "predicted_disease": predicted_disease,
-        "confidence"       : round(confidence, 2),
-        "valid_symptoms"   : valid_symptoms,
-        "invalid_symptoms" : invalid_symptoms,
+        "predicted_disease": disease,
+        "confidence"       : conf,
+        "valid_evidences"  : valid,
+        "invalid_evidences": invalid,
         "alternatives"     : alternatives,
         "explanation"      : explanation
     }
 
 
 # ================================================================
-# ROUTE 1 — Health Check
-# GET /health
+# ROUTE 1 — Health
 # ================================================================
 @app.route('/health', methods=['GET'])
 def health():
     return jsonify({
         "status"   : "UP",
-        "service"  : "CDSS AI Prediction API",
-        "timestamp": datetime.now().isoformat(),
-        "model"    : "Random Forest",
-        "symptoms" : len(symptom_cols),
-        "diseases" : len(le.classes_)
+        "service"  : "CDSS AI Prediction API (DDXPlus)",
+        "model"    : "XGBoost",
+        "features" : len(feature_cols),
+        "diseases" : len(le.classes_),
+        "timestamp": datetime.now().isoformat()
     }), 200
 
 
 # ================================================================
-# ROUTE 2 — Main Prediction Endpoint
-# POST /predict
-# Body: { "symptoms": ["itching", "skin_rash"] }
+# ROUTE 2 — Predict
+# Body: { "evidences": ["E_91","E_54_@_V_181"], "age": 35, "sex": "F" }
 # ================================================================
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
         data = request.get_json()
-
         if not data:
+            return jsonify({"error": "Request body missing or not JSON"}), 400
+
+        # Accept "evidences" (new) or "symptoms" (legacy alias)
+        evidences = data.get('evidences', data.get('symptoms'))
+        if not isinstance(evidences, list) or len(evidences) == 0:
             return jsonify({
-                "error": "Request body is missing or not JSON"
+                "error": "'evidences' must be a non-empty list",
+                "example": {"evidences": ["E_91", "E_54_@_V_181"],
+                            "age": 35, "sex": "F"}
             }), 400
 
-        if 'symptoms' not in data:
-            return jsonify({
-                "error"  : "Missing 'symptoms' field in request body",
-                "example": {"symptoms": ["itching", "skin_rash"]}
-            }), 400
+        age = data.get('age')
+        sex = data.get('sex')
 
-        symptoms = data['symptoms']
+        result = predict_core(evidences, age, sex)
 
-        if not isinstance(symptoms, list) or len(symptoms) == 0:
-            return jsonify({
-                "error": "'symptoms' must be a non-empty list"
-            }), 400
-
-        result = predict_with_explanation(symptoms)
-
-        response = {
-            "status"           : "success",
-            "timestamp"        : datetime.now().isoformat(),
-            "input_symptoms"   : symptoms,
-            "valid_symptoms"   : result['valid_symptoms'],
-            "invalid_symptoms" : result['invalid_symptoms'],
-            "prediction"       : {
+        return jsonify({
+            "status"          : "success",
+            "timestamp"       : datetime.now().isoformat(),
+            "input"           : {"evidences": evidences, "age": age, "sex": sex},
+            "valid_evidences" : result['valid_evidences'],
+            "invalid_evidences": result['invalid_evidences'],
+            "prediction"      : {
                 "disease"     : result['predicted_disease'],
                 "confidence"  : result['confidence'],
                 "alternatives": result['alternatives']
             },
-            "explanation"      : result['explanation']
-        }
-
-        return jsonify(response), 200
+            "explanation"     : result['explanation']
+        }), 200
 
     except Exception as e:
-        return jsonify({
-            "status" : "error",
-            "message": str(e)
-        }), 500
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 
 # ================================================================
-# ROUTE 3 — Get All Available Symptoms
-# GET /symptoms
+# ROUTE 3 — Evidence catalog (frontend builds its picker from this)
+# GET /evidences
 # ================================================================
-@app.route('/symptoms', methods=['GET'])
-def get_symptoms():
+@app.route('/evidences', methods=['GET'])
+def get_evidences():
+    catalog = [feature_metadata[f] for f in feature_cols]
     return jsonify({
         "status"  : "success",
-        "count"   : len(symptom_cols),
-        "symptoms": sorted(symptom_cols)
+        "count"   : len(catalog),
+        "evidences": catalog
     }), 200
 
 
 # ================================================================
-# ROUTE 4 — Get All Diseases
-# GET /diseases
+# ROUTE 4 — Diseases
 # ================================================================
 @app.route('/diseases', methods=['GET'])
 def get_diseases():
@@ -234,48 +176,28 @@ def get_diseases():
 
 
 # ================================================================
-# ROUTE 5 — Verify Prediction (for blockchain audit)
-# POST /verify
-# Body: { "symptoms": [...], "expected_disease": "Fungal infection" }
+# ROUTE 5 — Verify (blockchain audit support)
 # ================================================================
 @app.route('/verify', methods=['POST'])
 def verify():
     try:
-        data             = request.get_json()
-        symptoms         = data.get('symptoms', [])
-        expected_disease = data.get('expected_disease', '')
-
-        result = predict_with_explanation(symptoms)
-        match  = result['predicted_disease'] == expected_disease
-
+        data = request.get_json()
+        evidences = data.get('evidences', data.get('symptoms', []))
+        expected  = data.get('expected_disease', '')
+        result    = predict_core(evidences, data.get('age'), data.get('sex'))
         return jsonify({
             "status"           : "success",
-            "expected_disease" : expected_disease,
+            "expected_disease" : expected,
             "predicted_disease": result['predicted_disease'],
-            "match"            : match,
+            "match"            : result['predicted_disease'] == expected,
             "confidence"       : result['confidence']
         }), 200
-
     except Exception as e:
-        return jsonify({
-            "status" : "error",
-            "message": str(e)
-        }), 500
+        return jsonify({"status": "error", "message": str(e)}), 500
 
 
-# ================================================================
-# Run the app
-# ================================================================
 if __name__ == '__main__':
-    print("\n" + "=" * 50)
-    print("   🚀 CDSS Flask API Starting...")
-    print("=" * 50)
-    print("   URL      : http://localhost:5000")
-    print("   Endpoints:")
-    print("     GET  /health")
-    print("     POST /predict")
-    print("     GET  /symptoms")
-    print("     GET  /diseases")
-    print("     POST /verify")
-    print("=" * 50 + "\n")
+    print("\n🚀 CDSS Flask API (DDXPlus) — http://localhost:5000")
+    print("   GET  /health    GET  /evidences   GET  /diseases")
+    print("   POST /predict   POST /verify\n")
     app.run(debug=True, host='0.0.0.0', port=5000)
