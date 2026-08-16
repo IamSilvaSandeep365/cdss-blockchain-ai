@@ -29,13 +29,17 @@ public class PrescriptionService {
                 .orElseThrow(() -> new RuntimeException("Patient not found"));
 
         // Call Flask AI service
-        PredictionResponse prediction = flaskService.predict(req.getSymptoms());
+        //PredictionResponse prediction = flaskService.predict(req.getSymptoms());
+        PredictionResponse prediction = flaskService.predict(
+                req.getEvidences(), req.getAge(), req.getSex());
 
         // Build and save prescription
         Prescription prescription = Prescription.builder()
                 .patient(patient)
                 .doctor(doctor)
-                .symptoms(req.getSymptoms())
+                .evidences(req.getEvidences())
+                .patientAge(req.getAge())
+                .patientSex(req.getSex())
                 .predictedDisease(prediction.getPredictedDisease())
                 .confidenceScore(prediction.getConfidence())
                 .finalDiagnosis(req.getFinalDiagnosis() != null
@@ -79,7 +83,7 @@ public class PrescriptionService {
                                 PredictionResponse prediction) {
         try {
             String data = req.getPatientId()
-                    + req.getSymptoms().toString()
+                    + req.getEvidences().toString()
                     + prediction.getPredictedDisease()
                     + prediction.getConfidence()
                     + System.currentTimeMillis();

@@ -111,13 +111,10 @@ contract PrescriptionRegistry {
     // Called by Spring Boot to verify prescription integrity
     // ============================================================
     function verifyPrescriptionHash(
-        string  memory prescriptionId,
-        bytes32        hashToVerify
+    	string  memory prescriptionId,
+    	bytes32        hashToVerify
     ) public view prescriptionExists(prescriptionId) returns (bool) {
-
-        bool isValid = records[prescriptionId].recordHash == hashToVerify;
-
-        return isValid;
+    	return records[prescriptionId].recordHash == hashToVerify;
     }
 
     // ============================================================

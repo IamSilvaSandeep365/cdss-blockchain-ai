@@ -10,8 +10,12 @@ public class PrescriptionRequest {
     @NotNull(message = "Patient ID is required")
     private Long patientId;
 
-    @NotEmpty(message = "At least one symptom is required")
-    private List<String> symptoms;
+    @NotEmpty(message = "At least one evidence is required")
+    private List<String> evidences;
+
+
+    private Integer age;
+    private String  sex;
 
     private String finalDiagnosis;
     private String prescribedMedication;

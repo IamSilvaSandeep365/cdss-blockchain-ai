@@ -11,6 +11,7 @@ import org.web3j.tx.gas.ContractGasProvider;
 import org.web3j.tx.gas.DefaultGasProvider;
 import jakarta.annotation.PostConstruct;
 import java.math.BigInteger;
+import org.web3j.tx.gas.StaticGasProvider;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.Arrays;
@@ -41,7 +42,10 @@ public class BlockchainService {
             web3j       = Web3j.build(new HttpService(ganacheUrl));
             credentials = Credentials.create(privateKey);
 
-            ContractGasProvider gasProvider = new DefaultGasProvider();
+            ContractGasProvider gasProvider = new StaticGasProvider(
+                    BigInteger.valueOf(20_000_000_000L),   // gas price: 20 gwei
+                    BigInteger.valueOf(6_000_000L)          // gas limit: 6 million (under Ganache's ~6.7M block limit)
+            );
 
             contract = PrescriptionRegistry.load(
                     contractAddress, web3j, credentials, gasProvider);
@@ -88,11 +92,12 @@ public class BlockchainService {
         try {
             byte[] hashBytes = hexStringToBytes32(recordHash);
 
+            // Wrapper returns a Boolean directly
             Boolean isValid = contract.verifyPrescriptionHash(
                     prescriptionId, hashBytes).send();
 
             log.info("🔍 Verification result for {}: {}", prescriptionId, isValid);
-            return isValid;
+            return isValid != null && isValid;
 
         } catch (Exception e) {
             log.error("❌ Verification failed: {}", e.getMessage());

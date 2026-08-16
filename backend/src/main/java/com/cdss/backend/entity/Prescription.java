@@ -27,10 +27,16 @@ public class Prescription {
 
     // Symptoms entered by doctor
     @ElementCollection
-    @CollectionTable(name = "prescription_symptoms",
+    @CollectionTable(name = "prescription_evidences",
             joinColumns = @JoinColumn(name = "prescription_id"))
-    @Column(name = "symptom")
-    private List<String> symptoms;
+    @Column(name = "evidence")
+    private List<String> evidences;
+
+    @Column(name = "patient_age")
+    private Integer patientAge;
+
+    @Column(name = "patient_sex")
+    private String patientSex;
 
     // AI prediction result
     @Column(name = "predicted_disease")

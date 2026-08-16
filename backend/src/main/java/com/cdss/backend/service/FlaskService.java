@@ -18,10 +18,12 @@ public class FlaskService {
 
     private final WebClient.Builder webClientBuilder;
 
-    public PredictionResponse predict(List<String> symptoms) {
+    public PredictionResponse predict(List<String> evidences, Integer age, String sex) {
         try {
             Map<String, Object> requestBody = new HashMap<>();
-            requestBody.put("symptoms", symptoms);
+            requestBody.put("evidences", evidences);
+            requestBody.put("age", age);
+            requestBody.put("sex", sex);
 
             Map response = webClientBuilder.build()
                     .post()
@@ -43,10 +45,10 @@ public class FlaskService {
                         (List<Map<String, Object>>) prediction.get("alternatives"));
                 result.setExplanation(
                         (List<Map<String, Object>>) response.get("explanation"));
-                result.setValidSymptoms(
-                        (List<String>) response.get("valid_symptoms"));
-                result.setInvalidSymptoms(
-                        (List<String>) response.get("invalid_symptoms"));
+                result.setValidEvidences(
+                        (List<String>) response.get("valid_evidences"));
+                result.setInvalidEvidences(
+                        (List<String>) response.get("invalid_evidences"));
             }
 
             return result;
