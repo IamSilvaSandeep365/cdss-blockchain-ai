@@ -71,7 +71,7 @@ public class PrescriptionRegistry extends Contract {
 
     static {
         _addresses = new HashMap<String, String>();
-        _addresses.put("5777", "0xb04Aee73CcB117aF10851197aa4CE8d26a450bE9");
+        _addresses.put("5777", "0xb6a3f4758883a8b3FAcdD7741c7D364796B467f7");
     }
 
     @Deprecated

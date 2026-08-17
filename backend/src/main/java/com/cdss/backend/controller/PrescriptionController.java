@@ -87,4 +87,32 @@ public class PrescriptionController {
 
         return ResponseEntity.ok(response);
     }
+    @GetMapping("/stats")
+    public ResponseEntity<Map<String, Object>> getStats(
+            @AuthenticationPrincipal UserDetails userDetails) {
+
+        List<Prescription> prescriptions =
+                prescriptionService.getDoctorPrescriptions(userDetails.getUsername());
+
+        long total        = prescriptions.size();
+        long onBlockchain = prescriptions.stream()
+                .filter(p -> p.getBlockchainTxHash() != null)
+                .count();
+
+        // Count prescriptions per disease (for a simple breakdown)
+        Map<String, Long> byDisease = new LinkedHashMap<>();
+        for (Prescription p : prescriptions) {
+            String d = p.getPredictedDisease();
+            if (d != null) {
+                byDisease.merge(d, 1L, Long::sum);
+            }
+        }
+
+        Map<String, Object> stats = new LinkedHashMap<>();
+        stats.put("totalPrescriptions", total);
+        stats.put("onBlockchain",       onBlockchain);
+        stats.put("pending",            total - onBlockchain);
+        stats.put("byDisease",          byDisease);
+        return ResponseEntity.ok(stats);
+    }
 }

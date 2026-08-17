@@ -26,6 +26,7 @@ le               = _load('label_encoder.pkl')
 feature_cols     = _load('symptom_columns.pkl')
 explainer        = _load('shap_explainer.pkl')
 feature_metadata = _load('feature_metadata.pkl')
+disease_name_map = _load('disease_name_map.pkl')
 print(f"✅ Loaded! {len(feature_cols)} features, {len(le.classes_)} diseases")
 
 
@@ -55,14 +56,17 @@ def build_input(evidences, age, sex):
 def predict_core(evidences, age, sex):
     vec, valid, invalid = build_input(evidences, age, sex)
 
-    enc     = int(model.predict(vec)[0])
-    disease = le.inverse_transform([enc])[0]
-    proba   = model.predict_proba(vec)[0]
-    conf    = round(float(proba[enc]) * 100, 2)
+    enc         = int(model.predict(vec)[0])
+    raw_disease = le.inverse_transform([enc])[0]
+    disease     = disease_name_map.get(raw_disease, raw_disease)   # friendly name
+    proba       = model.predict_proba(vec)[0]
+    conf        = round(float(proba[enc]) * 100, 2)
 
     top3 = np.argsort(proba)[::-1][:3]
     alternatives = [
-        {"disease": le.inverse_transform([int(i)])[0],
+        {"disease": disease_name_map.get(
+                        le.inverse_transform([int(i)])[0],
+                        le.inverse_transform([int(i)])[0]),
          "probability": round(float(proba[i]) * 100, 2)}
         for i in top3
     ]
@@ -168,10 +172,14 @@ def get_evidences():
 # ================================================================
 @app.route('/diseases', methods=['GET'])
 def get_diseases():
+    # Apply friendly names here too, so the diseases list reads nicely
+    friendly = sorted(
+        disease_name_map.get(d, d) for d in le.classes_.tolist()
+    )
     return jsonify({
         "status"  : "success",
         "count"   : len(le.classes_),
-        "diseases": sorted(le.classes_.tolist())
+        "diseases": friendly
     }), 200
 
 
